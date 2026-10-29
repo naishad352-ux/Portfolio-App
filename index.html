@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>Naishadh Prajapati | QA Tester</title>
+  <meta name="description" content="Naishadh Prajapati, QA manual tester. BCA graduate with a 6-month QA internship.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Icons (used everywhere with <use href="#name">) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="github" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></symbol>
+  <symbol id="linkedin" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></symbol>
+  <symbol id="file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+  <symbol id="download" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+  <symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+</svg>
+
+<!-- Floating bubbles (created by script.js) -->
+<div class="bubbles" id="bubbles" aria-hidden="true"></div>
+
+<!-- Header -->
+<header class="nav" id="nav">
+  <a class="logo" href="#home">Naishadh</a>
+  <div class="hicons">
+    <a href="https://github.com/naishad352-ux" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg class="ic"><use href="#github"/></svg></a>
+    <a href="https://www.linkedin.com/in/naishad-prajapati-3801b0403/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="ic"><use href="#linkedin"/></svg></a>
+    <button class="theme" id="theme" type="button" aria-label="Switch to dark mode" title="Dark / Light mode"><svg class="ic"><use id="theme-ic" href="#moon"/></svg></button>
+  </div>
+  <nav class="links" id="links">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- Home -->
+<section id="home" class="section hero">
+  <div class="hero-text">
+    <p class="hi"><span class="wave" role="img" aria-label="waving hand">&#128075;</span> Hello, I'm</p>
+    <h1>Naishadh Prajapati</h1>
+    <p class="role">QA Testing</p>
+    <p class="lead">I test apps carefully, find bugs and report them clearly, so users get a smooth experience.</p>
+    <div class="btns">
+      <a class="btn primary" href="#contact"><svg class="ic"><use href="#mail"/></svg>Contact Me</a>
+      <a class="btn ghost" href="resume.pdf" download="Naishadh_Prajapati_QA_Resume.pdf"><svg class="ic"><use href="#download"/></svg>Download Resume</a>
+    </div>
+    <div class="icons">
+      <a class="big" href="https://github.com/naishad352-ux" target="_blank" rel="noopener" aria-label="My GitHub profile"><svg class="ic"><use href="#github"/></svg><span>GitHub</span></a>
+      <a class="big" href="https://www.linkedin.com/in/naishad-prajapati-3801b0403/" target="_blank" rel="noopener" aria-label="My LinkedIn profile"><svg class="ic"><use href="#linkedin"/></svg><span>LinkedIn</span></a>
+    </div>
+  </div>
+  <img class="photo" id="photo" src="photo.jpg" alt="Naishadh Prajapati" width="320" height="320">
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <div class="head"><h2>About</h2><p>A little about who I am</p></div>
+  <div class="grid g2">
+    <div class="card">
+      <h3>Introduction</h3>
+      <p>Hi, I'm <b>Naishadh Prajapati</b>. I completed my <b>BCA</b> from <b>Sardar Patel University, Anand</b>.</p>
+      <p>I did a <b>6-month internship</b> at <b>Outamation Technology Pvt. Ltd., Nadiad</b>, where I worked in <b>QA manual testing</b>. I write test scenarios, run tests, find bugs and report them in a simple, clear way.</p>
+      <p>I am looking for a QA Tester job where I can keep learning and help the team ship good quality software.</p>
+    </div>
+    <div class="card">
+      <h3>Education</h3>
+      <p><b>BCA</b><br>Sardar Patel University, Anand<br><span class="muted">Graduated 2026</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="section">
+  <div class="head"><h2>Experience</h2><p>Where I worked and what I did</p></div>
+  <div class="grid g2">
+    <article class="card">
+      <div class="row"><h3>QA Manual Testing Intern</h3><span class="pill">6 months</span></div>
+      <p class="muted">Outamation Technology Pvt. Ltd., Nadiad &middot; May 2026 to Oct 2026</p>
+      <ul>
+        <li>Wrote test scenarios and test cases based on requirements.</li>
+        <li>Executed test cases and identified bugs in the application.</li>
+        <li>Reported bugs with clear steps, severity and priority using Jira.</li>
+        <li>Performed smoke, functional and regression testing, including retesting.</li>
+        <li>Practiced API testing and followed the STLC and Bug Life Cycle.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <div class="row"><h3>React.js Intern</h3><span class="pill">1 month</span></div>
+      <p class="muted">Frontend Development Internship &middot; April 2026 to May 2026</p>
+      <ul>
+        <li>Learned React.js basics, including components, JSX and props.</li>
+        <li>Built user interfaces using reusable React components.</li>
+        <li>Developed a simple To-Do List application using React.js.</li>
+        <li>Practiced adding and managing daily tasks in the application.</li>
+        <li>Improved my understanding of frontend development and JavaScript.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+  <div class="head"><h2>Skills</h2><p>Tools and testing knowledge I use</p></div>
+  <div class="grid g2">
+    <div class="card">
+      <h3>QA Testing</h3>
+      <div class="tags">
+        <span>STLC</span><span>SDLC</span><span>Test Scenarios</span><span>Functional Testing</span><span>Smoke Testing</span>
+        <span>Regression Testing</span><span>Retesting</span><span>Bug Reporting</span><span>Bug Life Cycle</span><span>API Testing</span><span>Jira</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Other Skills</h3>
+      <div class="tags"><span>React.js</span><span>GitHub</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+  <div class="head"><h2>Projects</h2><p>Things I tested and built</p></div>
+  <div class="grid g3">
+    <article class="card">
+      <span class="pill">QA Testing</span>
+      <h3>Nimbus QA Auth App</h3>
+      <p>Manual testing of Login, Sign Up, Forgot Password and Logout. I wrote test scenarios, executed them in an Excel sheet and prepared a Bugs and Suggestions report.</p>
+      <a class="plink" href="https://github.com/naishad352-ux" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+    <article class="card">
+      <span class="pill">Frontend</span>
+      <h3>Clock App</h3>
+      <p>A simple clock app built with React.</p>
+      <a class="plink" href="https://github.com/naishad352-ux" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+    <article class="card">
+      <span class="pill">Frontend</span>
+      <h3>Dashboard</h3>
+      <p>A clean dashboard page made as a frontend practice project.</p>
+      <a class="plink" href="https://github.com/naishad352-ux" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <div class="head"><h2>Contact</h2><p>Let's connect</p></div>
+  <div class="grid g2">
+    <div class="card">
+      <h3>Get in touch</h3>
+      <p class="muted">Looking for a QA Tester? Send me a message and I will reply soon.</p>
+      <ul class="rows">
+        <li><svg class="ic"><use href="#mail"/></svg><div class="info"><small>Email</small><span class="val">naishad352@gmail.com</span></div></li>
+        <li><svg class="ic"><use href="#phone"/></svg><div class="info"><small>Phone</small><span class="val">+91 90548 95553</span></div></li>
+        <li><svg class="ic"><use href="#github"/></svg><div class="info"><small>GitHub</small><a href="https://github.com/naishad352-ux" target="_blank" rel="noopener">github.com/naishad352-ux</a></div></li>
+        <li><svg class="ic"><use href="#linkedin"/></svg><div class="info"><small>LinkedIn</small><a href="https://www.linkedin.com/in/naishad-prajapati-3801b0403/" target="_blank" rel="noopener">LinkedIn profile</a></div></li>
+      </ul>
+    </div>
+
+    <form class="card" id="form">
+      <p id="status" class="thanks" hidden></p>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+      <label>Name<input type="text" name="name" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label>Message<textarea name="message" rows="4" required></textarea></label>
+      <button type="submit" id="send">Send Message</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer><p>&copy; <span id="year">2026</span> Naishadh Prajapati</p></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
