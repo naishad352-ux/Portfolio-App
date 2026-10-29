@@ -98,15 +98,107 @@ footer{text-align:center;color:var(--muted);font-size:.88rem;padding:24px 20px;p
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* ---------- Phones and small screens ---------- */
-@media(max-width:760px){
-  .nav{flex-wrap:wrap;row-gap:6px}
-  .hicons{order:1}
-  .links{order:2;flex-basis:100%;margin:0 -8px}
-  .section{padding-top:60px;padding-bottom:60px}
-  .hero{flex-direction:column-reverse;text-align:center;min-height:0;gap:28px;padding-top:32px}
-  .lead{margin:0 auto}
-  .icons,.btns{justify-content:center}
-  .bubbles i:nth-child(n+13){display:none}
-  html{scroll-padding-top:110px}
+
+@media screen and (max-width: 760px) {
+  .nav {
+    padding-left: 14px;
+    padding-right: 14px;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .hicons {
+    gap: 6px;
+  }
+
+  .hicons a,
+  .theme {
+    width: 36px;
+    height: 36px;
+  }
+
+  .links {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    align-items: center;
+    min-height: auto;
+    padding-top: 36px;
+    gap: 26px;
+  }
+
+  .hero-text {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 8vw, 40px);
+    overflow-wrap: anywhere;
+  }
+
+  .photo {
+    display: block;
+    width: min(260px, 72vw);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .btns {
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .btn {
+    max-width: 100%;
+    padding: 11px 14px;
+    white-space: normal;
+  }
+
+  .grid,
+  .g2,
+  .g3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .row {
+    align-items: flex-start;
+  }
+
+  .bubbles {
+    pointer-events: none;
+  }
 }
-@media(max-width:380px){.card{padding:18px}.big{width:84px}}
+
+@media screen and (max-width: 380px) {
+  .section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .btns {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
