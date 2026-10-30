@@ -59,20 +59,33 @@ document.addEventListener('click', (e) => {
 
 /* ===== Header: shadow after scroll + highlight the section you are on ===== */
 (function () {
-  const nav = $('#nav'), box = $('#links'), links = $$('#links a');
+  const nav = $('#nav'), links = $$('#links a');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
   function setActive(id) {
     links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
-    const a = $('#links a.active');
-    if (a) box.scrollTo({ left: a.offsetLeft - (box.clientWidth - a.offsetWidth) / 2, behavior: 'smooth' });
   }
   if (!('IntersectionObserver' in window)) return;
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) setActive(e.target.id); });
   }, { rootMargin: '-45% 0px -50% 0px' });
   $$('main section').forEach((s) => io.observe(s));
+})();
+
+/* ===== Phone menu (3-line button): opens and closes the menu ===== */
+(function () {
+  const burger = $('#burger'), menu = $('#menu');
+  const set = (open) => {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  burger.addEventListener('click', () => set(!menu.classList.contains('open')));
+  menu.addEventListener('click', (e) => { if (e.target.closest('.links a')) set(false); });
+  document.addEventListener('click', (e) => { if (!e.target.closest('#nav')) set(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') set(false); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 760) set(false); });
 })();
 
 /* ===== Floating bubbles (small, decoration only) ===== */

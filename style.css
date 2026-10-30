@@ -1,3 +1,4 @@
+@font-face{font-family:"Inter";src:url("inter.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
 /* ---------- Colors (light + dark) ---------- */
 :root{--bg:#f4f7fb;--bg2:#e9eff8;--card:#ffffff;--text:#0f172a;--muted:#5b6678;--line:#e1e7ef;--accent:#2563eb;--accent-soft:rgba(37,99,235,.12);--on:#ffffff;--shadow:0 6px 24px rgba(15,23,42,.06)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f172a;--bg2:#0b1220;--card:#16213a;--text:#e8edf6;--muted:#9aa7bd;--line:#26344f;--accent:#60a5fa;--accent-soft:rgba(96,165,250,.16);--on:#0f172a;--shadow:0 6px 24px rgba(0,0,0,.25)}}
@@ -99,14 +100,57 @@ footer{text-align:center;color:var(--muted);font-size:.88rem;padding:24px 20px;p
 
 /* ---------- Phones and small screens ---------- */
 @media(max-width:760px){
-  .nav{flex-wrap:wrap;row-gap:6px}
-  .hicons{order:1}
-  .links{order:2;flex-basis:100%;margin:0 -8px}
   .section{padding-top:60px;padding-bottom:60px}
   .hero{flex-direction:column-reverse;text-align:center;min-height:0;gap:28px;padding-top:32px}
   .lead{margin:0 auto}
   .icons,.btns{justify-content:center}
   .bubbles i:nth-child(n+13){display:none}
-  html{scroll-padding-top:110px}
 }
 @media(max-width:380px){.card{padding:18px}.big{width:84px}}
+
+/* ===== Same font and same header on Android, iPhone and laptop ===== */
+body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+button,input,textarea{font-family:inherit}
+
+/* ===== Header: normal menu on laptop, 3-line menu button on phones ===== */
+.nav{min-height:60px;gap:12px}
+.menu{display:flex;align-items:center;gap:12px;margin-left:auto}
+.links{order:0;gap:2px;overflow:visible}
+.links a{display:flex;align-items:center;justify-content:center;height:38px;padding:0 12px;font-size:.92rem;line-height:1}
+.hicons{order:0;gap:8px}
+.hicons a,.theme{width:38px;height:38px}
+.btn-resume,.burger{display:none}
+.btn-resume{align-items:center;gap:6px;height:38px;padding:0 14px;border-radius:10px;background:var(--accent);color:var(--on);font-weight:700;font-size:.85rem;line-height:1.1;white-space:nowrap}
+.btn-resume:hover{text-decoration:none;opacity:.9}
+.btn-resume .ic{width:18px;height:18px}
+.burger{width:40px;height:40px;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:5px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);cursor:pointer}
+.burger span{display:block;width:20px;height:2px;border-radius:2px;background:currentColor;transition:transform .25s,opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:760px){
+  .nav{flex-wrap:nowrap;padding:8px 14px;padding-top:calc(8px + env(safe-area-inset-top,0px));padding-left:max(14px,env(safe-area-inset-left,0px));padding-right:max(14px,env(safe-area-inset-right,0px))}
+  .logo{margin-right:auto}
+  .btn-resume{display:inline-flex}
+  .burger{display:flex}
+  .menu{position:absolute;top:100%;left:0;right:0;margin:0;display:none;flex-direction:column;align-items:stretch;gap:0;padding:8px 14px 18px;background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 14px 28px rgba(15,23,42,.14);max-height:calc(100vh - 70px);overflow-y:auto}
+  .menu.open{display:flex}
+  .links{flex-direction:column;gap:2px}
+  .links a{justify-content:flex-start;height:46px;padding:0 12px;font-size:1rem}
+  .hicons{justify-content:flex-start;gap:10px;margin-top:10px;padding:14px 12px 0;border-top:1px solid var(--line)}
+  .hicons a,.theme{width:42px;height:42px}
+  .hicons .only-desktop{display:none}
+  html{scroll-padding-top:76px}
+}
+@media(max-width:400px){.btn-resume .full{display:none}.btn-resume{padding:0 12px}}
+
+/* ===== Header sizes in px, so it looks the same on every phone ===== */
+.nav{min-height:60px}
+.logo{font-size:18px;line-height:1}
+.links a{font-size:15px}
+.btn-resume{height:38px;gap:6px;padding:0 14px;font-size:14px}
+.btn-resume .full{display:none}
+@media(max-width:760px){
+  .nav{min-height:56px;gap:10px}
+  .links a{font-size:16px}
+}
