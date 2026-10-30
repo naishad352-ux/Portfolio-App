@@ -179,4 +179,5 @@ async function sendMessage({ name, email, message }) {
     }
     btn.disabled = false; btn.textContent = 'Send Message';
   });
-})();
+})
+();
