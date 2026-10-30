@@ -15,14 +15,14 @@ button{-webkit-appearance:none;appearance:none}
 main,footer{position:relative;z-index:1}
 
 /* ---------- Header ---------- */
-.nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;min-height:64px;padding:10px 20px;padding-top:calc(10px + env(safe-area-inset-top,0px));padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));background:var(--card);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+.nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;min-height:64px;padding:10px 24px;padding-top:calc(10px + env(safe-area-inset-top,0px));padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));background:var(--card);border-bottom:1px solid var(--line);transition:box-shadow .3s}
 .nav.scrolled{box-shadow:0 4px 18px rgba(15,23,42,.08)}
 .logo{font-size:20px;font-weight:800;color:var(--text)}
 .logo:hover{text-decoration:none}
 
-.menu{display:flex;align-items:center;gap:20px}
+.menu{display:flex;align-items:center;gap:24px}
 .links{display:flex;align-items:center;gap:6px}
-.links a{display:flex;align-items:center;height:38px;padding:0 12px;border-radius:8px;color:var(--muted);font-size:15px;font-weight:600;white-space:nowrap;transition:color .25s,background .25s}
+.links a{display:flex;align-items:center;height:38px;padding:0 14px;border-radius:8px;color:var(--muted);font-size:15px;font-weight:600;white-space:nowrap;transition:color .25s,background .25s}
 .links a:hover{color:var(--accent);text-decoration:none}
 .links a.active{color:var(--accent);background:var(--accent-soft)}
 
